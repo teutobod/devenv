@@ -1,15 +1,14 @@
 {
 	"name": "C++",
-	"build": {
-		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick an Debian / Ubuntu OS version: debian-10, debian-9, ubuntu-20.04, ubuntu-18.04
-		"args": {"VARIANT": "ubuntu-18.04", "GTEST_VERSION": "1.10.0" }
-	},
+	// "build": {
+	// 	"dockerfile": "Dockerfile",
+	// 	// Update 'VARIANT' to pick an Debian / Ubuntu OS version: debian-10, debian-9, ubuntu-20.04, ubuntu-18.04
+	// 	"args": {"VARIANT": "ubuntu-18.04", "GTEST_VERSION": "1.10.0" }
+	// },
     
-    // "image": "rikorose/gcc-cmake:gcc-10",
+    "image": "docker.pkg.github.com/teutobod/devenv/vsc-gtest:1.0",
 
     "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
-
 
 
 	// Set *default* container specific settings.json values on container create.
