@@ -1,7 +1,6 @@
 {
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "cmake.buildDirectory": "${workspaceFolder}/.build",
-    "files.associations": {
-        "cstdint": "cpp"
-    }
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_fallbackStyle": "Google"
 }
