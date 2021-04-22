@@ -1,3 +1,3 @@
 #include <cstring>
 
-size_t GetLengthOfString(const char *string) { return strlen(string); }
+size_t RomanToInt(const char *string) { return strlen(string); }
