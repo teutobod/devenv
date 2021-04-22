@@ -2,6 +2,4 @@
 
 #include "main.h"
 
-TEST(Maintest, StringLengthEquals42) {
-  EXPECT_EQ(42, GetLengthOfString("Donaudampfschiffahrtsgesellschaftskapitän"));
-}
+TEST(Maintest, RomanIequal1) { EXPECT_EQ(1, RomanToInt("I")); }
