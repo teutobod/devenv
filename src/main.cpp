@@ -17,11 +17,11 @@ static size_t ConvertRomanLetterToInteger(const char roman_letter) {
   }
 }
 
-static size_t ForEveryLetterInRomanString(const char *roman_string) {
-  int length = strlen(roman_string);
+static size_t ForEveryLetterInRomanString(const char *roman_string,
+                                          size_t roman_string_len) {
   size_t accumulated_value = ConvertRomanLetterToInteger(roman_string[0]);
 
-  for (int i = 1; i < length; i++) {
+  for (int i = 1; i < roman_string_len; i++) {
     int current_number = ConvertRomanLetterToInteger(roman_string[i]);
     int previous_number = ConvertRomanLetterToInteger(roman_string[i - 1]);
     if (previous_number >= current_number) {
@@ -34,5 +34,10 @@ static size_t ForEveryLetterInRomanString(const char *roman_string) {
 }
 
 size_t RomanToInt(const char *roman_string) {
-  return ForEveryLetterInRomanString(roman_string);
+  size_t converted_roman_int = 0;
+  int length = strlen(roman_string);
+  if (length > 0) {
+    converted_roman_int = ForEveryLetterInRomanString(roman_string, length);
+  }
+  return converted_roman_int;
 }
