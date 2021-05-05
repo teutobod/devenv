@@ -4,6 +4,6 @@
 
 #include <stddef.h>
 
-size_t RomanToInt(const char *string);
+size_t RomanToInt(const char *roman_string);
 
 #endif
